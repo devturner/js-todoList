@@ -20,10 +20,12 @@ var todoList = {
     window.sessionStorage.setItem('todoList', JSON.stringify(this.todos));
   },
   addTodo: function(todoText, completed) {
-    this.todos.push({
-      todoText: todoText,
-      completed: completed,
-    });
+    if (todoText) {
+      this.todos.push({
+        todoText: todoText,
+        completed: completed,
+      })
+    };
     todoList.persistTodos();
   },
   changeTodo: function(position, todoText) {
