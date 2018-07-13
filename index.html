@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practical Todos</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link id="favicon" rel="icon" href="https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Ffavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1>todo list</h1>
+    
+    <div>
+      <input class="add_item" maxlength="29" id="addTodoTextInput" type="text"><button class="add_button" onclick="handlers.addTodo()">Add</button>
+      <div class="items">
+        <ul class="list">
+        </ul>
+        <button class="toggle_button" onclick="handlers.toggleAll()">toggle list</button>
+        <button class="deleteAll_button" onclick="handlers.deleteAll()">clear list</button>
+      </div>
+    </div>
+
+
+    <script src="/client.js"></script>
+  </body>
+</html>
