@@ -85,9 +85,11 @@ var handlers = {
   },
   changeTodo: function(position) {
     var todoText = prompt("Edit your item:");
-    todoList.changeTodo(position, todoText);
+      if (todoText) {
+        todoList.changeTodo(position, todoText);
+      }
     view.displayTodos();
-  },
+  }, 
   deleteTodo: function(position) {
     todoList.deleteTodo(position);
     view.displayTodos();
